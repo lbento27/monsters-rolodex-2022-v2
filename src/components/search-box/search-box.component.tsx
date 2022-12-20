@@ -1,7 +1,18 @@
 //import { Component } from "react";
 import "./search-box.styles.css";
 
-const SearchBox = ({ onChangeHandler, placeholder, className }) => {
+//typeScript
+import { ChangeEventHandler } from "react";
+
+type SearchBoxProps = {
+  className: string;
+  placeholder?: string;
+  //func: (a: string)=> void
+  onChangeHandler : ChangeEventHandler<HTMLInputElement>;
+}
+//typescript
+
+const SearchBox = ({ onChangeHandler, placeholder, className } : SearchBoxProps) => {
   //const { onChangeHandler, placeholder, className } = this.props;
 
   return (
