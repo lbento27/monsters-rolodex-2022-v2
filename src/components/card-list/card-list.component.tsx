@@ -4,7 +4,16 @@ import "./card-list.styles.css";
 
 import Card from "../card/card.component";
 
-const CardList = ({ monsters }) => {
+//typescript
+import { Monsters } from "../../App";
+
+type CardListProps ={
+  monsters: Monsters[];
+}
+//
+
+
+const CardList = ({ monsters } : CardListProps) => {
   //const { monsters } = this.props;
   return (
     <div className="card-list">
